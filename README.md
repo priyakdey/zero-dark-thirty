@@ -17,9 +17,11 @@ everything here with a pinch of salt.
 ## Table of Content
 - [Data Structures and Algorithms](#data-structures-algorithms)
 - [LICENSE](#license)
+
 ## Data Structures and Algorithms
 
 1. DSA Solution from [workat.tech](https://workat.tech): [workattech](./workattech)
+1. DSA Solution from [algoexpert.io](https://algoexpert.io): [algoexpert](./algoexpert)
 
 
 # LICENSE
