@@ -22,6 +22,7 @@ everything here with a pinch of salt.
 
 1. DSA Solution from [workat.tech](https://workat.tech): [workattech](./workattech)
 1. DSA Solution from [algoexpert.io](https://algoexpert.io): [algoexpert](./algoexpert)
+1. [Grind-75](https://www.techinterviewhandbook.org/grind75) solutions: [grind-75](./grind-75)
 
 
 # LICENSE
