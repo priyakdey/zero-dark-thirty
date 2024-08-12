@@ -27,70 +27,9 @@ public class ApartmentHunting {
 
     public static int apartmentHunting(List<Map<String, Boolean>> blocks, String[] reqs) {
         Objects.requireNonNull(blocks);
-
-        int[][] distances = calcMaxDistances(blocks, reqs);
-
-        Arrays.stream(distances).forEach(arr -> System.out.println(Arrays.toString(arr)));
-
-        int minDistance = blocks.size();
-        int optimalBlock = -1;
-
-        for (int block = 0, blockSize = blocks.size(); block < blockSize; block++) {
-            int distance = 0;
-            for(int req = 0, reqLength = reqs.length; req < reqLength; req++) {
-                distance += distances[req][block];
-            }
-            if (distance < minDistance) {
-                minDistance = distance;
-                optimalBlock = block;
-            }
-        }
-
-        return optimalBlock;
-    }
-
-    private static int[][] calcMaxDistances(List<Map<String, Boolean>> blocks, String[] reqs) {
-        int blockSize = blocks.size();
-        int reqLength = reqs.length;
-        int[][] distances = new int[reqLength][blockSize];
-
-
-        for (int i = 0; i < reqLength; i++) {
-            String req = reqs[i];
-            int closestIndex = -1;
-            for (int j = 0; j < blockSize; j++) {
-                Map<String, Boolean> block = blocks.get(j);
-                if (!block.containsKey(req)) {
-                    throw new IllegalArgumentException("invalid argument");
-                }
-
-                if (Boolean.TRUE.equals(block.get(req))) {
-                    closestIndex = j;
-                } else {
-                    if (closestIndex == -1) {
-                        distances[i][j] = blockSize;
-                    } else {
-                        distances[i][j] = j - closestIndex;
-                    }
-                }
-            }
-
-            closestIndex = -1;
-            for (int j = blockSize - 1; j >= 0; j--) {
-                Map<String, Boolean> block = blocks.get(j);
-                if (Boolean.TRUE.equals(block.get(req))) {
-                    closestIndex = j;
-                } else {
-                    if (closestIndex == -1) {
-                        distances[i][j] = Math.min(distances[i][j], blockSize);
-                    } else {
-                        distances[i][j] = Math.min(distances[i][j], closestIndex - j);
-                    }
-                }
-            }
-        }
-
-        return distances;
+        Objects.requireNonNull(reqs);
+        
+        return -1;
     }
 
 
