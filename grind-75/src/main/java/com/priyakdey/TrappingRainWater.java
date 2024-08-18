@@ -17,7 +17,7 @@ public class TrappingRainWater {
         int length = heights.length;
         int width = 1;
 
-        if (length < 3)  return 0;
+        if (length < 3) return 0;
         if (length == 3) {
             if (heights[1] >= heights[0] || heights[1] >= heights[2]) {
                 return 0;
